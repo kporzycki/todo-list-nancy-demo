@@ -1,0 +1,53 @@
+﻿html, body {
+    background: black;
+    height: 100%;
+}
+
+.list-container {
+    height: 100%;
+    width: 50%;
+    margin: auto;
+    font-family: Tahoma;
+    font-size: larger;
+    text-align: center;
+    background: white;
+    overflow: auto;
+}
+
+.notes-table {
+  border-collapse: collapse;
+  margin: auto auto 30px auto;
+}
+
+.notes-table td {
+  padding: 10px;
+}
+
+.notes-table thead td {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.notes-table tbody tr {
+  background: linear-gradient(#fff, #ddd)
+}
+
+.notes-table input[type="checkbox"] {
+  width: 100%;
+  height: 30px;
+}
+
+.notes-table button {
+  height: 100%;
+}
+
+#add-note-input{
+  width: 40%;
+  height: 28px;
+  background: linear-gradient(#fff, #ddd);
+  border: 1px solid black;
+}
+
+#add-note-button {
+  width: 10%;
+  height: 30px;
+}

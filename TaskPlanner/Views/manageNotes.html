@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="../Content/styles.css" type="text/css" />
+    <title>View your notes</title>
+</head>
+<body>
+
+<div class="list-container">
+    <h1>Your todo list</h1>
+
+    <table class="notes-table">
+        <thead>
+        <tr>
+            <th>Is done</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody data-bind="foreach: notes">
+        <tr class="noteEntry">
+            <td><input type="checkbox" data-bind="checked: isDone, event: {change: $parent.putNote}"/></td>
+            <td data-bind="text: description"></td>
+            <td><button data-bind="click: $parent.deleteNote">delete</button></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <input id="add-note-input" data-bind="value: description" placeholder="Enter note"/>
+    <button id="add-note-button" data-bind="click: addNote">Add note</button>
+</div>
+
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+<script language="javascript" src="../Content/notes.js"></script>
+
+</body>
+</html>
